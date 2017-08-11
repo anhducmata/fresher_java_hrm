@@ -1,51 +1,30 @@
 package employee;
 
-public class Employee {
-	int id;
-	String name;
-	String address;
-	String edu;
+public abstract class Employee
+{
+	private String name, phone;
 	
-	public Employee() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Employee(int id, String name, String address, String edu){
-		this.id = id;
+	public Employee() {}
+	public Employee(String name, String phone)
+	{ 
 		this.name = name;
-		this.address = address;
-		this.edu = edu;
+		this.phone = phone;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
+	public final String getName()
+	{ 
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	  
+	public final String getPhoneNumber()
+	{
+		return phone;
 	}
-
-	public String getAddress() {
-		return address;
+	  
+	public String toString()
+	{
+		return name + " Phone: " + phone;
 	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getEdu() {
-		return edu;
-	}
-
-	public void setEdu(String edu) {
-		this.edu = edu;
-	}
+		
+	public abstract double salaryPay();
 }
